@@ -31,6 +31,10 @@ I think it should also be possible to start from the end instead, asking 'Which 
 ### Executing a plan
 Now that we have our Actions and a Planner... How do we execute our plan? This is most often done in combination with a very simple FSM, namely with 3 states: Idle, MoveTo and DoAction. While in the Idle state, your AI will find their goal, current situation and call the Planner to make a plan, usually in a queue of actions. Then it will start with checking the first action. Every action should know if it must be done at a specific location or can be executed wherever you are. If it has a location, change state to MoveTo and set the target, else continue with DoAction and repeat with the next action. When all actions are done (or something important changes) return to state Idle and make a new plan.
 
+# My Project
+I will try this AI in the framework that we used in class. It is a simple Agario game, with a bunch of agents wandering and one smarter AI agent. For this smart agent we made two versions, one using FSM and one using a binary tree structure. Now I will make a third version with Goap and summarize the advantages and disadvantages in my experience.
+
+First of all, I built in the simple FSM in one class because I know on forehand that the states and conditions will never change. It is only the base to switch between making a plan, executing an action and moving. Since agario does not have complex sequences of actions, the plan is only to chose the one most valuable action at that time. Every agent also has a blackboard with information about himself and the world that the behavior needs to know. I store the available actions there too.
 
 
 [^1]: Source: https://gamedevelopment.tutsplus.com/tutorials/goal-oriented-action-planning-for-a-smarter-ai--cms-20793
