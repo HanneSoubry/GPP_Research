@@ -4,12 +4,12 @@
 // Includes & Forward Declarations
 //-----------------------------------------------------------------
 #include "framework/EliteInterfaces/EIApp.h"
+#include "Actions.h"
 
 class AgarioFood;
 class AgarioAgent;
 class AgarioContactListener;
 class NavigationColliderElement;
-class GoapAction;
 
 class App_AgarioGame_GOAP final : public IApp
 {
@@ -26,7 +26,6 @@ private:
 	std::vector<AgarioAgent*> m_pAgentVec{};
 
 	AgarioAgent* m_pSmartAgent = nullptr;
-	std::vector<GoapAction*> m_pGoapActionsVec;
 	const float m_SearchRadius{ 20.f };
 
 	const int m_AmountOfFood{ 40 };

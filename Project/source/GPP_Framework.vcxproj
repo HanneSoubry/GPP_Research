@@ -206,6 +206,7 @@
     <ClCompile Include="projects\DecisionMaking\BehaviorTrees\App_AgarioGame_BT.cpp" />
     <ClCompile Include="projects\DecisionMaking\FiniteStateMachines\App_AgarioGame.cpp" />
     <ClCompile Include="projects\DecisionMaking\FiniteStateMachines\StatesAndTransitions.cpp" />
+    <ClCompile Include="projects\DecisionMaking\GoalOrientedActionPlanning\Actions.cpp" />
     <ClCompile Include="projects\DecisionMaking\GoalOrientedActionPlanning\App_AgarioGame_GOAP.cpp" />
     <ClCompile Include="projects\Movement\Pathfinding\AStar\App_PathfindingAStar\App_PathfindingAStar.cpp" />
     <ClCompile Include="projects\Movement\Pathfinding\GraphTheory\App_GraphTheory.cpp" />

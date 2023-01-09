@@ -47,6 +47,7 @@
     <ClCompile Include="projects\DecisionMaking\BehaviorTrees\App_AgarioGame_BT.cpp" />
     <ClCompile Include="projects\DecisionMaking\GoalOrientedActionPlanning\App_AgarioGame_GOAP.cpp" />
     <ClCompile Include="framework\EliteAI\EliteDecisionMaking\EliteGoalOrientedActionPlanning\EGoalOrientedActionPlanning.cpp" />
+    <ClCompile Include="projects\DecisionMaking\GoalOrientedActionPlanning\Actions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projects\App_Selector.h" />

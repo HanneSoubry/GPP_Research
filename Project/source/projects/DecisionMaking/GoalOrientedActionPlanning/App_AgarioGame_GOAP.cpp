@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "App_AgarioGame_GOAP.h"
-#include "Actions.h"
+//#include "Actions.h"
 
 #include "projects/Shared/Agario/AgarioFood.h"
 #include "projects/Shared/Agario/AgarioAgent.h"
@@ -89,9 +89,18 @@ void App_AgarioGame_GOAP::Start()
 				
 	//2. Create Behavior 
 	// TODO: behaviour for smart agent
+	GoapBehavior* smartAIBehavior{ new GoapBehavior(pBlackboard) };
+
+	{	// scope for this namespace
+		using namespace GOAP_Actions;
+		smartAIBehavior->AddAction(new GOAPActionWander);
+		smartAIBehavior->AddAction(new GOAPActionEatFood);
+		smartAIBehavior->AddAction(new GOAPActionEatEnemy);
+		smartAIBehavior->AddAction(new GOAPActionRunFromEnemy);
+	}
 
 	//3. Set the Behavior active on the agent 
-	//m_pSmartAgent->SetDecisionMaking();
+	m_pSmartAgent->SetDecisionMaking(smartAIBehavior);
 	m_pSmartAgent->SetRenderBehavior(true);
 	m_pSmartAgent->SetMaxLinearSpeed(20.f);
 }
@@ -155,9 +164,11 @@ Blackboard* App_AgarioGame_GOAP::CreateBlackboard(AgarioAgent* a)
 	pBlackboard->AddData("AgentsVec", &m_pAgentVec);
 	pBlackboard->AddData("FoodVec", &m_pFoodVec);
 	//pBlackboard->AddData("WorldSize", m_TrimWorldSize);
+
 	pBlackboard->AddData("Target", Elite::Vector2{});
-	pBlackboard->AddData("AgentTarget", static_cast<AgarioAgent*>(nullptr)); // Needs the cast for the type
-	pBlackboard->AddData("Actions", &m_pGoapActionsVec);
+	pBlackboard->AddData("TargetAgentIndex", int{});
+	pBlackboard->AddData("TargetAgent", static_cast<AgarioAgent*>(nullptr)); // Needs the cast for the type
+	pBlackboard->AddData("TargetFood", static_cast<AgarioFood*>(nullptr)); // Needs the cast for the type
 
 	return pBlackboard;
 }

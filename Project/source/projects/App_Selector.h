@@ -10,8 +10,8 @@
 //#define ActiveApp_AStar
 //#define ActiveApp_NavMesh
 //#define ActiveApp_FSM
-#define ActiveApp_BT
-//#define ActiveApp_GOAP
+//#define ActiveApp_BT
+#define ActiveApp_GOAP
 
 //---------- Registered Applications -----------
 #ifdef ActiveApp_Sandbox
