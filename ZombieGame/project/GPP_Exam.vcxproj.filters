@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Plugin.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Steering.cpp">
+      <Filter>Steering</Filter>
+    </ClCompile>
+    <ClCompile Include="EFiniteStateMachine.cpp">
+      <Filter>EDecisionMaking</Filter>
+    </ClCompile>
+    <ClCompile Include="EGoalOrientedActionPlanning.cpp">
+      <Filter>EDecisionMaking</Filter>
+    </ClCompile>
+    <ClCompile Include="GoapActions.cpp">
+      <Filter>DecisionMaking</Filter>
+    </ClCompile>
+    <ClCompile Include="StatesAndTransitions.cpp">
+      <Filter>DecisionMaking</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Plugin.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Steering.h">
+      <Filter>Steering</Filter>
+    </ClInclude>
+    <ClInclude Include="EBlackboard.h">
+      <Filter>EDecisionMaking</Filter>
+    </ClInclude>
+    <ClInclude Include="EFiniteStateMachine.h">
+      <Filter>EDecisionMaking</Filter>
+    </ClInclude>
+    <ClInclude Include="HelperStructs.h" />
+    <ClInclude Include="EGoalOrientedActionPlanning.h">
+      <Filter>EDecisionMaking</Filter>
+    </ClInclude>
+    <ClInclude Include="StatesAndTransitions.h">
+      <Filter>DecisionMaking</Filter>
+    </ClInclude>
+    <ClInclude Include="GoapActions.h">
+      <Filter>DecisionMaking</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Steering">
+      <UniqueIdentifier>{56e985e0-f503-4e46-b6ba-7503e12eec55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EDecisionMaking">
+      <UniqueIdentifier>{df11a9d7-f48d-42c6-b4e1-47f1737aa71a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DecisionMaking">
+      <UniqueIdentifier>{ea988c09-daf2-45b1-9b02-5d91f4723b97}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
